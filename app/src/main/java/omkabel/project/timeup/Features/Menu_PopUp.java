@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -45,7 +46,7 @@ public class Menu_PopUp extends AppCompatActivity  implements MyController {
     @BindView(R.id.password)
     EditText Pass;
     @BindView(R.id.BtnSubmit)
-    EditText Submit;
+    Button Submit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +96,7 @@ public class Menu_PopUp extends AppCompatActivity  implements MyController {
 
     private void GotoQuiz() {
         Package=getIntent().getExtras().getString("PACKAGE");
-        Intent i=new Intent(Menu_PopUp.this,Menu_ListSoal.class);
+        Intent i=new Intent(Menu_PopUp.this,Menu_Tugas.class);
         i.putExtra("PACKAGE",Package );
         startActivity(i);
         finish();

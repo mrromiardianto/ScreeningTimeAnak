@@ -116,8 +116,8 @@ public class Controller {
             }
         });
     }
-    public void Daftar(String Imei,String Nama,String Password){
-        retrofit2.Call<ResponseBody> call = InitRetrofit.getInstance().getApi().UserDaftar(Imei,Nama,Password);
+    public void Daftar( String Imei, String Nama, String Password,String NamaAnak){
+        retrofit2.Call<ResponseBody> call = InitRetrofit.getInstance().getApi().UserDaftar(Imei,Nama,Password,NamaAnak);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

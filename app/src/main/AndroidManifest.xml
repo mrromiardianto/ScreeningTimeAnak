@@ -3,12 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="omkabel.project.timeup">
 
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="29" />
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
-<!--    <uses-permission android:name="android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE"/>-->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" /> <!-- <uses-permission android:name="android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE"/> -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -19,14 +23,11 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-    <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="29"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
     <uses-feature
         android:name="android.software.device_admin"
-        android:required="true"/>
-
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -36,102 +37,126 @@
         android:roundIcon="@drawable/ic_logoapk"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Features.Menu_Notifikasi"></activity>
+        <activity android:name=".Features.Menu_UploadTugas"></activity>
+        <activity android:name=".Features.Menu_Tugas" />
+        <activity android:name=".Features.Menu_Profile" />
+        <activity android:name=".Features.Menu_Notifikasi" />
+
         <service
             android:name=".Utils.AppCheckServices"
             android:exported="false" /> <!-- <service android:name=".BackEnd.MyService"/> -->
-        <activity android:name=".Features.Menu_SplashScreen"
+        <activity
+            android:name=".Features.Menu_SplashScreen"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Fragment.Menu_Utama"
+            android:excludeFromRecents="true"
             android:label="@string/title_activity_menu__utama"
-            android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_ResetPassword"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_ResetPassword"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Fragment.PasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.PasswordActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Fragment.PasswordRecoverSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.PasswordRecoverSetActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Fragment.PasswordSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.PasswordSetActivity"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Fragment.PasswordRecoveryActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Fragment.PasswordRecoveryActivity"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_RegisterPassword"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_RegisterPassword"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_Dashboard"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_Dashboard"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_LupaPassword"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_LupaPassword"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_InputPassword"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_InputPassword"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_Masuk"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_Masuk"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_ListSoal"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_ListSoal"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_SettingJadwal"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_SettingJadwal"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_ListAplikasi"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_ListAplikasi"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Fragment.SplashActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Fragment.SplashActivity"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_ListJadwal"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_Quiz"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_Statistic"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Features.Menu_PopUp"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_ListJadwal"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_Quiz"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_Statistic"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Features.Menu_PopUp"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
 
         <receiver
             android:name=".Utils.BootComplete"
@@ -148,13 +173,13 @@
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
-                android:resource="@xml/device_admin"/>
+                android:resource="@xml/device_admin" />
 
             <intent-filter>
-                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
-                <action android:name="android.app.action.ACTION_PASSWORD_CHANGED"/>
-                <action android:name="android.app.action.ACTION_PASSWORD_FAILED"/>
-                <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED"/>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.ACTION_PASSWORD_CHANGED" />
+                <action android:name="android.app.action.ACTION_PASSWORD_FAILED" />
+                <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED" />
             </intent-filter>
         </receiver>
     </application>

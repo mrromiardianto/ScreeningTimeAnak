@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Time Up</string>
+    <string name="app_name">SCREEMING TIME</string>
     <string name="jam_mulai">Masukan Jam Mulai Aplikasi</string>
     <string name="jam_akhir">Masukan Jam Akhir Aplikasi</string>
     <string name="in">Masuk</string>
@@ -12,7 +12,7 @@
     <string name="newPengingat">Masukan Kata Pengingat Baru</string>
     <string name="not_acc">Lupa Password?</string>
     <string name="Aplikasi">Aplikasi Anda</string>
-    <string name="Quiz">Kerjakan Quiz</string>
+    <string name="Quiz">Kerjakan Tugas</string>
     <string name="Jadwal">Aplikasi Terjadwal</string>
     <string name="Exit">Keluar</string>
     <string name="notifikasi">Notifikasi Pengingat</string>
@@ -94,7 +94,7 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="soal">Soal</string>
+    <string name="soal">Tugas</string>
     <string name="jadwal">Jadwal Aplikasi</string>
     <string name="ss">data</string>
     <string name="statistic">Statistik Penggunaan Aplikasi</string>

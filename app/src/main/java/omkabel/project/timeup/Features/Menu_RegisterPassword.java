@@ -27,6 +27,8 @@ public class Menu_RegisterPassword extends AppCompatActivity implements MyContro
     EditText Password;
     @BindView(R.id.Pengingat)
     EditText Pengingat;
+    @BindView(R.id.NamaAnak)
+    EditText Nama;
     @BindView(R.id.Btn_Daftar)
     Button Btn_Daftar;
     @BindView(R.id.Daftar_Masuk)
@@ -59,6 +61,7 @@ public class Menu_RegisterPassword extends AppCompatActivity implements MyContro
     private void Validasi() {
         String password=Password.getText().toString();
         String nama=Pengingat.getText().toString();
+        String namaanak=Nama.getText().toString();
         SharedPrefManager sharedPrefManager=new SharedPrefManager(Menu_RegisterPassword.this);
         String Imei=sharedPrefManager.getSP_IMEI();
         if (password.equals("")||nama.equals("")){
@@ -68,14 +71,14 @@ public class Menu_RegisterPassword extends AppCompatActivity implements MyContro
             loading.setMessage("Mohon Tunggu...");
             loading.setCancelable(false);
             loading.show();
-            RequestDaftar(Imei,nama,password);
+            RequestDaftar(Imei,nama,password,namaanak);
 
         }
     }
 
-    private void RequestDaftar(String imei, String nama, String password) {
+    private void RequestDaftar( String imei, String nama, String password,String NamaAnak) {
         Controller controller =new Controller(Menu_RegisterPassword.this);
-        controller.Daftar(imei,nama,password);
+        controller.Daftar(imei,nama,password,NamaAnak);
     }
 
     private void GotoMasuk() {

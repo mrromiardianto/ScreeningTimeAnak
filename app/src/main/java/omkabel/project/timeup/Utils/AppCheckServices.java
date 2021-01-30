@@ -84,6 +84,8 @@ public class AppCheckServices extends Service implements MyController {
             LAYOUT_FLAG = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
         }else  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             LAYOUT_FLAG = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        }else  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            LAYOUT_FLAG = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
         }else {
             LAYOUT_FLAG = WindowManager.LayoutParams.TYPE_PHONE;
         }
@@ -137,7 +139,7 @@ public class AppCheckServices extends Service implements MyController {
             if (isConcernedAppIsInForeground()) {
                 Log.d("isConcernedAppIsInFrgnd", "true");
                 Log.v("data","Terkunci");
-//                Toast.makeText(getApplication(), "Terkunci", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplication(), "Ngapain loh buka buka", Toast.LENGTH_SHORT).show();
                 if (imageView != null) {
                     imageView.post(new Runnable() {
                         public void run() {

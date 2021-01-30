@@ -3,6 +3,7 @@ package omkabel.project.timeup.Server;
 import okhttp3.ResponseBody;
 import omkabel.project.timeup.Server.Response.Response_Jadwal;
 import omkabel.project.timeup.Server.Response.Response_Soal;
+import omkabel.project.timeup.Server.Response.Response_Tugas;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -28,8 +29,9 @@ public interface ApiServices {
     @POST("RegisterImei.php")
     Call<ResponseBody> UserDaftar(
             @Field("Imei") String emai,
-            @Field("nama") String nama,
-            @Field("password") String password
+            @Field("kata_pengingat") String nama,
+            @Field("password") String password,
+            @Field("nama") String namaanak
     );
 
     @FormUrlEncoded
@@ -101,4 +103,8 @@ public interface ApiServices {
             @Field("nama") String nama
     );
 
+    @GET("tampiltugas.php/{imei}")
+    Call<Response_Tugas> tampil_tugas(
+            @Query("imei") String imei
+    );
 }

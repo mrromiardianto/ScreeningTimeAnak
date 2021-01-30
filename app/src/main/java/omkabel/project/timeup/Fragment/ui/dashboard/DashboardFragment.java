@@ -20,6 +20,7 @@ import omkabel.project.timeup.Features.Menu_Dashboard;
 import omkabel.project.timeup.Features.Menu_ListAplikasi;
 import omkabel.project.timeup.Features.Menu_ListJadwal;
 import omkabel.project.timeup.Features.Menu_Notifikasi;
+import omkabel.project.timeup.Features.Menu_Profile;
 import omkabel.project.timeup.Features.Menu_Statistic;
 import omkabel.project.timeup.R;
 
@@ -64,7 +65,7 @@ public class DashboardFragment extends Fragment {
     }
 
     private void GotoReminder() {
-        Intent intent=new Intent(getContext(), Menu_Notifikasi.class);
+        Intent intent=new Intent(getContext(), Menu_Profile.class);
         startActivity(intent);
         getActivity().finish();
     }

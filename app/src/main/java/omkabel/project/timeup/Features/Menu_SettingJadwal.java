@@ -1,5 +1,6 @@
 package omkabel.project.timeup.Features;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -63,12 +64,14 @@ public class Menu_SettingJadwal extends AppCompatActivity implements MyControlle
 //        ArrayList<String> pakageName = sharedPreference.getLocked(context);
 //        Toast.makeText(this, ""+pakageName, Toast.LENGTH_SHORT).show();
         jamakhir.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
                 showTimestop();
             }
         });
         jammulai.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
                 showTimestart();
@@ -107,13 +110,14 @@ public class Menu_SettingJadwal extends AppCompatActivity implements MyControlle
         Controller controller=new Controller(Menu_SettingJadwal.this);
         controller.SimpanJadwal(Imei,JamMulai,JamAkhir,Nama,Package);
     }
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void showTimestart() {
         Calendar calendar = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             calendar = Calendar.getInstance();
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             timePickerDialog = new TimePickerDialog(Menu_SettingJadwal.this, new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -125,13 +129,14 @@ public class Menu_SettingJadwal extends AppCompatActivity implements MyControlle
         }
         timePickerDialog.show();
     }
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void showTimestop() {
         Calendar calendar = null;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             calendar = Calendar.getInstance();
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             timePickerDialog = new TimePickerDialog(Menu_SettingJadwal.this, new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {

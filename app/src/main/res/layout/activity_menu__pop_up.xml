@@ -59,6 +59,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1">
                 <RelativeLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <ImageView
@@ -69,17 +70,17 @@
                         android:layout_marginTop="15dp"
                         app:srcCompat="@drawable/ic_quiz"
                         tools:ignore="VectorDrawableCompat"/>
+
                     <TextView
+                        android:layout_marginTop="80dp"
                         android:id="@+id/judulQuiz"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/Quiz"
-                        android:layout_marginBottom="10dp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:text="@string/Quiz"
                         android:textColor="@color/c_black"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
