@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2abb9b</color>
+    <color name="colorPrimaryDark">#2abb9b</color>
+    <color name="colorAccent">#008080</color>
+    <color name="mainBackground">#ffffff</color>
+    <color name="mainColor">#2abb9b</color>
+    <color name="mainTextDark">#2c3e50</color>
+    <color name="c_white">#ffffff</color>
+    <color name="c_black">#000000</color>
+    <color name="c_abutua">#191919</color>
+    <color name="startblue">#008080</color>
+    <color name="endblue">#2F4F4F</color>
+    <color name="graylight">#556B2F</color>
+</resources>
